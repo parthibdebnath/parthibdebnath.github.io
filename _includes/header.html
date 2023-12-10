@@ -1,0 +1,111 @@
+
+<div id="particles-js">
+  <div class="header">
+      <script>
+        var alertcheck = false
+        function discordcopy() {
+        navigator.clipboard.writeText("okiedokie64");
+        alert("Attempted to copy Discord id! Username: okiedokie64");
+      }
+      </script>
+    
+      <style>
+          .social {
+            outline: none;
+          }
+
+          .social:link {
+            color: #ffffff;
+          }
+
+          .social:visited {
+            color: #ffffff;
+          }
+
+          .social:focus {
+            color: #ffffff;
+          }
+
+          .social:hover {
+            color: #4589ff;
+          }
+
+          .social:active {
+            color: #ffffff;
+          }‎‎‎‎
+
+
+          .link {
+            outline: none;
+          }
+
+          .link:link {
+            color: #ffffff;
+          }
+
+          .link:visited {
+            color: #ffffff;
+          }
+
+          .link:focus {
+            color: #ffffff;
+          }
+
+          .link:hover {
+            color: #4589ff;
+          }
+
+          .link:active {
+            color: #ffffff;
+          }‎‎‎‎
+            
+      </style> 
+    
+      <h1>
+        <span class="site-title">{{site.username}}</span>
+        <span class="site-description">{{site.user_title}}</span>‎‎‎‎‎‎
+      </h1‎‎‎‎>
+    
+
+
+<script>
+  fetch("https://api.lanyard.rest/v1/users/723559603899465738")
+    .then(response => response.json())
+    .then(data => {
+      const status = data.data.discord_status;
+      let statusText;
+      if (status === "online") {
+        statusText = "🟢   I am currently online! Feel free to contact me at this time.";
+      } else if (status === "idle") {
+        statusText = "🟡   I am away at the moment! I can reply to your message when I get back.";
+      } else if (status === "dnd") {
+        statusText = "🔴   I am busy at the moment! I will reply to your message when I have the time.";
+      } else if (status === "offline") {
+        statusText = "⚪    I am offline at the moment! I will respond to your message when I get back.";
+      } else {
+        statusText = "⚪    I am likely offline at the moment! I will respond to your message when I get back.";
+      }
+      document.getElementById("discordStatus").innerText = statusText;
+    })
+    .catch(error => {
+      console.error("Error fetching online status:", error);
+    });
+
+  
+</script>
+    
+
+      <div class="header-icons">
+        <a class="social" aria-label="My Discord" href="javascript:void(0);" onclick="discordcopy();"><i class="fa-brands fa-discord" style="font-size: 30px;padding-right: 5px;"></i></a>
+        <a class="social" aria-label="My BTC address" target="_blank" href="bitcoin://38gzyMmvK83ceuhYCJex5Up5UE4cXdMbGz" style="font-size: 30px;padding-right: 5px;"><i class="fa-brands fa-btc"></i></a>
+        <a class="social" aria-label="My Steam" target="_blank" href="https://steamcommunity.com/profiles/76561199217674125/" style="font-size: 30px;padding-right: 5px;"><i class="fa-brands fa-steam"></i></a>
+        <a class="social" aria-label="My Github" target="_blank" href="https://github.com/okiedokiegithub/" style="font-size: 30px;padding-right: 5px;"><i class="fa fa-github" aria-hidden="true"></i></a>
+      </div>
+      <div class="header-links">
+        <p id="discordStatus" style="color: rgba(255, 255, 255, 1);font-size: 10px;font-weight: normal;"></p><br>
+        <a class="link" href="#about" data-scroll>About Me</a>
+        <a class="link" href="#projects" data-scroll>Projects</a>
+      </div>
+  </div>
+  <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
+</div>
