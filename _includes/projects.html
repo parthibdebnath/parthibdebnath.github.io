@@ -1,13 +1,10 @@
 <style>
-    /* Default styles for the video element */
     video {
         max-width: 100%;
         height: auto;
         border-radius: 5px;
     }
-
-    /* Media query for screens with a minimum width of $cut */
-    @media only screen and (min-width: $cut) { /* Replace 768px with your $cut value */
+    @media only screen and (min-width: $cut) { 
         video {
             float: left;
             width: 48%;
@@ -17,6 +14,27 @@
 <div class="user-details">
   <h1> Featured Personal Projects </h1>
 </div>
+
+<div class="user-projects">
+  <div class="images-left">
+    <video controls>
+    <source src="/assets/img/shelldemo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="contents-right">
+    <h3> Custom CLI-like browser startpage </h3>
+    <ul>
+      <li> Command line/Terminal/Shell like interface to act as the default homepage of my browser.</li>
+      <li> Custom shortcuts to frequented sites and google and direct url support.</li>
+      <li> Many simulated linux commands with command auto-completion with "tab" key.</li>
+      <li> Supports live-data fetching using API's to get the weather, jokes, quotes and more.</li>
+    </ul>
+    <p>Customized Customized terminal liek interface to allow me to quickly get the information I want as soon as I open a new tab. Allows for extremely fast keyboard-only operations without clutter. Dozens of commands for all purposes related to web browsing and gathering information at a glance. Based on Cveinnt's Liveterm with heavy customization and aesthetic changes.</p>
+  
+  </div>
+</div>
+
 
 <div class="user-projects">
   <div class="images-left">
