@@ -7,7 +7,7 @@
     }
 
     /* Media query for screens with a minimum width of $cut */
-    @media only screen and (min-width: 768px) { /* Replace 768px with your $cut value */
+    @media only screen and (min-width: $cut) { /* Replace 768px with your $cut value */
         video {
             float: left;
             width: 48%;
@@ -24,7 +24,6 @@
     <source src="/assets/img/linuxos.mp4" type="video/mp4">
     Your browser does not support the video tag.
     </video>
-<!-->    <img alt="linuxos" src="{{ "/assets/img/linuxos.mp4" | prepend: site.baseurl }}" /> <!-->
   </div>
   <div class="contents-right">
     <h3> Custom Linux Operating System </h3>
